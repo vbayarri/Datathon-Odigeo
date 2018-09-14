@@ -1,0 +1,15 @@
+# Archivo de librerías de python utilizadas en el proyecto
+
+# Gestión de argumentos
+argparse
+argparse_actions
+
+# Gestión de imagenes
+PIL
+exifread
+
+# Generacion de MD5
+hashlib
+
+# Vision API Client Libraries 
+google-cloud-vision
