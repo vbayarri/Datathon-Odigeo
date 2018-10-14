@@ -8,6 +8,11 @@ UTF8Writer = codecs.getwriter('utf8')
 with open('google.txt') as json_file:
 	with open('google.csv', 'w') as csv_file:
 		output = UTF8Writer(csv_file)
+
+		# Write CSV Header
+		output.write("Hash;Property;Picture;Label_ID; Label_Text; Label_Score; Label_Topicality; Hotel_Type\n")
+
+		# Write CSV Data
 		data = json.load(json_file)
 		for attribute, value in data.iteritems():
 			hash = attribute
@@ -29,7 +34,7 @@ with open('google.txt') as json_file:
 				output.write(id + ";")
 				output.write(description + ";")
 				output.write(str(score) + ";")
-				output.write(str(topicality) + ";")
+				output.write(str(topicality))
 				output.write('\n')
 
 		csv_file.close() 
