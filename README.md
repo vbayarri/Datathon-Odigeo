@@ -8,7 +8,10 @@ Code Used on Odigeo Datathon
 - scripts: utilidades de tratamiento de informacion. Requiere variable de entorno: GOOGLE_APPLICATION_CREDENTIALS
 	- LocalImageInfo: retorna el tamaño de la imagen y sus datos EXIFF
 	- GoogleImageInfo: retorna las labels de la imagen así como lo textos detectados
-- data_sample_analysis: contiene los resultados de la ejecución de los scripts sobre el juego de datos data_sample
+- data_sample_analysis:contiene los resultados de la ejecución de los scripts sobre el juego de datos data_sample.
+	- google.json: información retornada por Google sobre los juegos de datos (gooble vision api + OCR)
+	- local.json: información obtenida de las imágenes.
+	- también contiene un script para pasar los resultados de formato json a csv.
 - env: debe incluirse un json con las credenciales para llamar a Google. Ver https://cloud.google.com/vision/docs/libraries#client-libraries-install-python
 
 # Información relevante:
